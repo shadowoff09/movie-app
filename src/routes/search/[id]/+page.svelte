@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="searched-movies"
+	class="grid grid-cols-auto-fit-200 gap-x-4 gap-y-8 pb-8"
 	in:scale={{ y: 50, duration: 700, delay: 700 }}
 	out:slide={{ duration: 400 }}
 >
@@ -14,12 +14,4 @@
 	{/each}
 </div>
 
-<style>
-	.searched-movies {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		column-gap: 1rem;
-		row-gap: 2rem;
-		padding-bottom: 2rem;
-	}
-</style>
+

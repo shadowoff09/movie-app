@@ -9,15 +9,19 @@
 </svelte:head>
 
 <div
-	class="movie-details"
+	class="my-1 mx-[20%]"
 	in:scale={{ y: 50, duration: 700, delay: 700 }}
 	out:slide={{ duration: 400 }}
 >
-	<div class="img-container">
+	<div class="w-full">
 		{#if data.movieDetails.backdrop_path === null}
-			<img src="https://via.placeholder.com/1280x720" alt={data.movieDetails.title} />
+			<img 
+				class="w-[78.5%] rounded-2xl" 
+				src="https://via.placeholder.com/1280x720" 
+				alt={data.movieDetails.title} />
 		{:else}
 			<img
+				class="w-[78.5%] rounded-2xl"
 				src={'https://image.tmdb.org/t/p/original' + data.movieDetails.backdrop_path}
 				alt={data.movieDetails.title}
 			/>
@@ -25,65 +29,35 @@
 	</div>
 	<div class="txt-container">
 		<div class="principal-text">
-			<h1>{data.movieDetails.title}</h1>
-			<h2>{data.movieDetails.tagline}</h2>
+			<h1 class="py-4 px-0 font-satoshi font-bold">{data.movieDetails.title}</h1>
+			<h2 class="font-satoshi font-medium">{data.movieDetails.tagline}</h2>
 		</div>
 
-		<p class="overview">{data.movieDetails.overview}</p>
-		<p>
-			<span>Release Date</span>
+		<p class="py-4 px-0 font-switzer font-semibold">{data.movieDetails.overview}</p>
+		<p class="py-4 px-0 font-switzer font-semibold">
+			<span class="font-bold">Release Date</span>
 			{data.movieDetails.release_date} <br />
-			<span>Budget</span>
+			<span class="font-bold">Budget</span>
 			{#if data.movieDetails.budget === 0}
 				N/A
 			{:else}
 				{millify(data.movieDetails.budget)}$
 			{/if} <br />
-			<span>Revenue</span>
+			<span class="font-bold">Revenue</span>
 			{#if data.movieDetails.revenue === 0}
 				N/A
 			{:else}
 				{millify(data.movieDetails.revenue)}$
 			{/if} <br />
-			<span>Rating</span>
+			<span class="font-bold">Rating</span>
 			{#if data.movieDetails.vote_average === 0}
 				N/A
 			{:else}
 				{data.movieDetails.vote_average}
 			{/if} <br />
-			<span>Runtime</span>
+			<span class="font-bold">Runtime</span>
 			{data.movieDetails.runtime} mins <br />
 		</p>
 	</div>
 </div>
 
-<style>
-	h1 {
-		padding: 1rem 0rem 1rem;
-		font-family: 'Satoshi', sans-serif;
-		font-weight: 900;
-	}
-	h2 {
-		font-family: 'Satoshi', sans-serif;
-		font-weight: 500;
-	}
-
-	p {
-		padding: 1rem 0rem;
-		font-family: 'Switzer', sans-serif;
-		font-weight: 600;
-	}
-	.img-container {
-		width: 100%;
-	}
-	img {
-		width: 78.5%;
-		border-radius: 1rem;
-	}
-	.movie-details {
-		margin: 2rem 20%;
-	}
-	span {
-		font-weight: bold;
-	}
-</style>

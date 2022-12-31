@@ -47,6 +47,7 @@
 
 	#theme-toggle:checked + label {
 		@apply bg-transparent;
-		box-shadow: inset -18px -16px 1px 1px white;
+		box-shadow: inset -18px -16px 1px 1px #ddd;
 	}
 </style>
+

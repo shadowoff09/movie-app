@@ -3,24 +3,23 @@
 @tailwind utilities;
 
 body {
-    transition: background-color 0.9s ease-in-out, color 0.4s ease-in-out;
-    @apply bg-white dark:bg-[#2a303c] text-black dark:text-white;
-    @apply min-h-screen;
-    
+	transition: background-color 0.9s ease-in-out, color 0.4s ease-in-out;
+	@apply bg-white dark:bg-[#2a303c] text-black dark:text-white;
+	@apply min-h-screen;
 }
 
-html{
-    @apply min-h-screen;
+html {
+	@apply min-h-screen;
+	@apply max-h-screen
 }
-
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }

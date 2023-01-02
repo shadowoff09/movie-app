@@ -1,6 +1,6 @@
-import 'dotenv/config'
+import 'dotenv/config';
 
-export const load = async ({params}) => {
+export const load = async ({ params }) => {
 	const fetchMovieDetails = async () => {
 		const res = await fetch(
 			`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.TMDB_API_KEY}&language=en-US&page=1`

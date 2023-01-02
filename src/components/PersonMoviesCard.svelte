@@ -15,7 +15,7 @@
 		</div>
 		<div class="h-[5vh]">
 			<h2 class="text-sm font-satoshi font-black">{movie.title}</h2>
-			<p class="text-xs text-gray-400 font-satoshi font-black">{movie.release_date}</p>
+			<p class="text-xs text-gray-400 font-satoshi font-black">{movie.character}</p>
 		</div>
 	</div>
 {:else}
@@ -25,13 +25,13 @@
 				<img
 					class="w-full object-cover rounded-2xl mb-4"
 					src="https://via.placeholder.com/500x750?text=No+Image"
-					alt={movie.title}
+					alt={movie.name}
 				/>
 			</a>
 		</div>
 		<div class="h-[5vh]">
 			<h2 class="text-sm font-satoshi font-black">{movie.title}</h2>
-			<p class="text-xs text-gray-400 font-satoshi font-black">{movie.release_date}</p>
+			<p class="text-xs text-gray-400 font-satoshi font-black">{movie.character}</p>
 		</div>
 	</div>
 {/if}

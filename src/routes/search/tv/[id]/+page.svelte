@@ -1,5 +1,5 @@
 <script>
-	import TVShowCard from '../../../../components/TVShowCard.svelte';
+	import PersonCard from '../../../../components/PersonCard.svelte';
 	import { slide, scale } from 'svelte/transition';
 	export let data;
 </script>
@@ -10,7 +10,7 @@
 	out:slide={{ duration: 400 }}
 >
 	{#each data.searchedPerson as person}
-		<TVShowCard {person} />
+		<PersonCard {person} />
 	{/each}
 </div>
 

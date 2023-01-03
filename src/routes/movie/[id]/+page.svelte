@@ -54,13 +54,13 @@
 			{#if data.movieDetails.vote_average === 0}
 				N/A
 			{:else if data.movieDetails.vote_average >= 8}
-				<span class="text-green-500">{data.movieDetails.vote_average}</span>
+				<span class="text-green-500">{data.movieDetails.vote_average.toFixed(1)}</span>/10
 			{:else if data.movieDetails.vote_average >= 6}
-				<span class="text-yellow-500">{data.movieDetails.vote_average}</span>
+				<span class="text-yellow-500">{data.movieDetails.vote_average.toFixed(1)}</span>/10
 			{:else if data.movieDetails.vote_average >= 4}
-				<span class="text-orange-500">{data.movieDetails.vote_average}</span>
+				<span class="text-orange-500">{data.movieDetails.vote_average.toFixed(1)}</span>/10
 			{:else if data.movieDetails.vote_average >= 2}
-				<span class="text-red-500">{data.movieDetails.vote_average}</span>
+				<span class="text-red-500">{data.movieDetails.vote_average.toFixed(1)}</span>/10
 			{/if} <br />
 			<span class="font-bold">Runtime</span>
 			{data.movieDetails.runtime} mins <br />

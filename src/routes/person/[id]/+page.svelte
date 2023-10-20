@@ -1,7 +1,7 @@
 <script>
 	export let data;
 	import { fade, blur, fly, slide, scale } from 'svelte/transition';
-	import { getAge } from '../../../lib/utils/getAge.js';
+	import { getAge } from '$lib/utils/getAge.js';
 </script>
 
 <svelte:head>
@@ -60,21 +60,32 @@
 				Unknown
 			{:else}
 				{data.personDetails.known_for_department}
-			{/if} <br />
-			<a href="/person/{data.personDetails.id}/movies">
-				<button
-					class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 dark:bg-gray-700 dark:hover:bg-gray-800 bg-[#f9fafb] border dark:border-transparent text-[#111827] dark:text-white mt-3"
-				>
-					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-						<path
-							fill="currentColor"
-							d="M18 4L20 7H17L15 4H13L15 7H12L10 4H8L10 7H7L5 4H4C2.9 4 2 4.9 2 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V4H18M11.25 15.25L10 18L8.75 15.25L6 14L8.75 12.75L10 10L11.25 12.75L14 14L11.25 15.25M16.94 11.94L16 14L15.06 11.94L13 11L15.06 10.06L16 8L16.94 10.06L19 11L16.94 11.94Z"
-						/>
-					</svg>
+			{/if}
+			</p>
+			
+				<a href="/person/{data.personDetails.id}/filmography">
+					<button
+						class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 dark:bg-gray-700 dark:hover:bg-gray-800 bg-[#f9fafb] border dark:border-transparent text-[#111827] dark:text-white mt-3"
+					>
+						<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							<path
+								fill="currentColor"
+								d="M18 4L20 7H17L15 4H13L15 7H12L10 4H8L10 7H7L5 4H4C2.9 4 2 4.9 2 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V4H18M11.25 15.25L10 18L8.75 15.25L6 14L8.75 12.75L10 10L11.25 12.75L14 14L11.25 15.25M16.94 11.94L16 14L15.06 11.94L13 11L15.06 10.06L16 8L16.94 10.06L19 11L16.94 11.94Z"
+							/>
+						</svg>
 
-					<span class="mx-1">Filmography</span>
-				</button>
-			</a>
-		</p>
+						<span class="mx-1">Filmography</span>
+					</button>
+				</a>
+
+				<a href="https://imdb.com/name/{data.personDetails.imdb_id}" target="_blank" rel="noreferrer">
+					<button
+						class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg focus:outline-none focus:ring focus:ring-opacity-80 bg-[#f3ce13] hover:bg-[#c5ac2d] border dark:border-transparent text-[#111827] mt-3"
+					>
+						<span class="font-bold font-tanker">IMDb</span>
+					</button>
+				</a>
+		
+
 	</div>
 </div>

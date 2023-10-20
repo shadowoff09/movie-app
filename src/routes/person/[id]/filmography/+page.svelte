@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import Cast from '$lib/components/Casts/Cast.svelte';
+	import PersonMovies from '$lib/components/PersonMovies.svelte';
 	import { fly } from 'svelte/transition';
 </script>
 
@@ -9,6 +9,5 @@
 </svelte:head>
 
 <section in:fly={{ y: 50, duration: 400, delay: 400 }} out:fly={{ duration: 400 }}>
-	<Cast {data} />
+	<PersonMovies {data} />
 </section>
-

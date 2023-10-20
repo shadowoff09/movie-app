@@ -1,6 +1,6 @@
 <script>
 	import millify from 'millify';
-	import { fade, blur, fly, slide, scale } from 'svelte/transition';
+	import { slide, scale } from 'svelte/transition';
 	export let data;
 </script>
 
@@ -67,7 +67,7 @@
 		</p>
 		<a href="/movie/{data.movieDetails.id}/cast">
 			<button
-				class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 
+				class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80
 				dark:bg-gray-700 dark:hover:bg-gray-800 bg-[#f9fafb] border dark:border-transparent text-[#111827] dark:text-white"
 			>
 				<svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -80,6 +80,5 @@
 				<span class="mx-1">Cast</span>
 			</button>
 		</a>
-		
 	</div>
 </div>

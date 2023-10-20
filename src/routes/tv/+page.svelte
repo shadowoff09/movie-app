@@ -1,7 +1,7 @@
 <script>
 	export let data;
-	import PopularTVShows from '../../components/PopularTVShows.svelte';
-	import SearchTVShows from '../../components/SearchTVShows.svelte';
+	import PopularTVShows from '$lib/components/Popular/PopularTVShows.svelte';
+	import SearchTVShows from '$lib/components/Search/SearchTVShows.svelte';
 	import { fly } from 'svelte/transition';
 
 	import '../../app.css';

@@ -1,6 +1,5 @@
 <script>
-	import millify from 'millify';
-	import { fade, blur, fly, slide, scale } from 'svelte/transition';
+	import { slide, scale } from 'svelte/transition';
 	export let data;
 </script>
 
@@ -38,26 +37,26 @@
 
 		<p class="py-4 px-0 font-switzer font-semibold">{data.TVShowDetails.overview}</p>
 		<p class="py-4 px-0 font-switzer font-semibold">
-			<span class="font-bold">First Air Date</span>
+			<span class="font-bold">First Air Date:</span>
 			{#if data.TVShowDetails.first_air_date === ''}
 				N/A
 			{:else}
 				{data.TVShowDetails.first_air_date} <br />
 			{/if}
-			<span class="font-bold">Number of Seasons</span>
+			<span class="font-bold">Number of Seasons:</span>
 			{#if data.TVShowDetails.number_of_seasons === 0}
 				N/A
 			{:else}
 				{data.TVShowDetails.number_of_seasons} <br />
 			{/if}
 
-			<span class="font-bold">Number of Episodes</span>
+			<span class="font-bold">Number of Episodes:</span>
 			{#if data.TVShowDetails.number_of_episodes === 0}
 				N/A
 			{:else}
 				{data.TVShowDetails.number_of_episodes} <br />
 			{/if}
-			<span class="font-bold">Rating</span>
+			<span class="font-bold">Rating:</span>
 			{#if data.TVShowDetails.vote_average === 0}
 				N/A
 			{:else if data.TVShowDetails.vote_average >= 8}
@@ -74,7 +73,7 @@
 		<div class="flex">
 			<a href="/tv/{data.TVShowDetails.id}/cast">
 				<button
-					class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 
+					class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80
 				dark:bg-gray-700 dark:hover:bg-gray-800 bg-[#f9fafb] border dark:border-transparent text-[#111827] dark:text-white"
 				>
 					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -89,13 +88,14 @@
 			</a>
 			<a href="/tv/{data.TVShowDetails.id}/episodes">
 				<button
-					class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 
+					class="flex items-center px-4 py-2 font-medium tracking-wid capitalize transition-all duration-900 transform rounded-lg hover:bg-gray-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80
 				dark:bg-gray-700 dark:hover:bg-gray-800 bg-[#f9fafb] border dark:border-transparent text-[#111827] dark:text-white ml-2"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="icon icon-tabler icon-tabler-device-tv"
-						style="width:24px;height:24px" viewBox="0 0 24 24"
+						style="width:24px;height:24px"
+						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
 						fill="none"

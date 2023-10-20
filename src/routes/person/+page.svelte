@@ -1,7 +1,7 @@
 <script>
 	export let data;
-	import PopularPersons from '../../components/PopularPersons.svelte';
-	import SearchPersons from '../../components/SearchPersons.svelte';
+	import PopularPersons from '$lib/components/Popular/PopularPersons.svelte';
+	import SearchPersons from '$lib/components/Search/SearchPersons.svelte';
 	import { fly } from 'svelte/transition';
 
 	import '../../app.css';

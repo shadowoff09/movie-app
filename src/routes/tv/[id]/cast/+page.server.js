@@ -3,10 +3,10 @@ import 'dotenv/config';
 export const load = async ({ params }) => {
 	const fetchCast = async () => {
 		const res = await fetch(
-			`https://api.themoviedb.org/3/tv/${params.id}/credits?api_key=${process.env.TMDB_API_KEY}&language=en-US`
+			`https://api.themoviedb.org/3/tv/${params.id}?api_key=${process.env.TMDB_API_KEY}&language=en-US&append_to_response=aggregate_credits`
 		);
 		const data = await res.json();
-		return data.cast;
+		return data.aggregate_credits.cast;
 	};
 
 	const fetchTvShowName = async () => {
